@@ -1,3 +1,3 @@
-class Questions < ActiveRecord::Base
+class Question < ActiveRecord::Base
   # Remember to create a migration!
 end
