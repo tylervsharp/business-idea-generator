@@ -1,0 +1,11 @@
+<!-- <% if !logged_in?%>
+
+<% elsif logged_in?%>
+
+<% end %> -->
+  <h1>Lists</h1>
+  <% @prompts.each do |prompt| %>
+    <ul>
+      <li><%= prompt %></li>
+    </ul>
+  <% end %>
