@@ -1,5 +1,4 @@
 get '/' do
-  @parsed = NewsParser
-  p @parsed
+  @parsed = GoogleTrendsParser.parse
   erb :'index'
 end
