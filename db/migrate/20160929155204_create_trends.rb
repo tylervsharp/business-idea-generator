@@ -5,5 +5,6 @@ class CreateTrends < ActiveRecord::Migration
       t.datetime :date, null: false
 
       t.timestamps(null: false)
+    end
   end
 end

@@ -1,3 +1,3 @@
 class Question < ActiveRecord::Base
-  # Remember to create a migration!
+  validates :body, presence: true
 end
