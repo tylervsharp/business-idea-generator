@@ -1,0 +1,7 @@
+<% if !logged_in?%>
+  <h1>Lists</h1>
+<% elsif logged_in?%>
+  <h1>Lists</h1>
+  <p>You are logged in! Congrats.</p>
+  <p><%= @parsed %></p>
+<% end %>
