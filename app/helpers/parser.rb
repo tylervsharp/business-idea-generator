@@ -6,7 +6,7 @@ module GoogleTrendsParser
   open(url) do |rss|
     feed = RSS::Parser.parse(rss)
     feed.items.each do |item|
-      output << {title: item.title, date: item.pubDate}
+      {title: item.title, date: item.pubDate}
     end
   end
 end
