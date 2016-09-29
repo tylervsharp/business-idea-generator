@@ -4,5 +4,6 @@ class CreateQuestions < ActiveRecord::Migration
       t.string :body, null: false
 
       t.timestamps(null: false)
+    end
   end
 end
