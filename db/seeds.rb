@@ -10,13 +10,13 @@ users = []
 questions = []
 
 questions_array = [
-  "What are your thoughts about ***?",
+  "*** - What are your thoughts?",
   "If you had to compare *** to a character in a book, movie or TV show, who would you choose and why?",
   "Have you been following what is going on with *** lately?",
   "What is your opinion about ***?",
   "When you think about ***, what comes to mind?",
   "What is your favorite thing about ***?",
-  "Why do you think so many people are following *** right now?",
+  "*** - why do you think so many people are following this right now?",
   "What about the human condition makes *** so interesting to so many?",
   "What about *** do you find interesting?",
   "What about *** annoys you?",
@@ -32,9 +32,9 @@ questions_array = [
   "If *** was a country, who would be the first president?",
   "If *** was pieces of clothing, what attributes would it have?",
   "What do you think is crazy about ***?",
-  "If *** was an island, what would it look like?",
+  "*** - if an island, what would that island look like?",
   "What are the best and worst parts about ***?",
-  "If you had to sum up *** in three words, what would they be?",
+  "If you had to sum up *** in three words, what would those words be?",
   "Is *** beneficial?",
   "What about *** do you find embarrasing?",
   "What about *** do you find disgusting?"]
