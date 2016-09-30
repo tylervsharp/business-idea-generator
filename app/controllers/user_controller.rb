@@ -1,15 +1,8 @@
 get '/users/new' do
-  if !logged_in?
-    redirect '/'
-  else
-    erb :'users/new'
-  end
+  erb :'users/new'
 end
 
 post '/users' do
-  if !logged_in?
-    redirect '/'
-  else
     user = User.new(params[:user])
     if user.save
       session[:user_id] = user.id
@@ -19,7 +12,6 @@ post '/users' do
       @errors = user.errors.full_messages
       erb :'users/new'
     end
-  end
 end
 
 get '/login' do

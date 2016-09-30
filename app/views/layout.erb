@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/application.css">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="/js/application.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/cover.css">
+    <link rel="stylesheet" href="css/application.css">
 
-  <title>Conversation Starter</title>
-</head>
-<header>
-  <nav>
-  <ul class="">
-    <% if logged_in? %>
-      <li><a href="/">Home</a></li>
-      <li><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
-      <li><a href="/logout">Logout</a></li>
-    <% else %>
-      <li><a href="/">Home</a></li>
-      <li><a href="/users/new">Register</a></li>
-      <li><a href="/login">Login</a></li>
-    <% end %>
-  </ul>
-</nav>
-</header>
-<body>
-  <%= yield %>
-</body>
+    <title>Conversation Starter</title>
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">ConversationStarter</h3>
+              <nav>
+              <ul class="nav masthead-nav">
+                <% if logged_in? %>
+                  <li class="active"><a href="/">Home</a></li>
+                  <li><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
+                  <li><a href="/logout">Logout</a></li>
+                <% else %>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/users/new">Register</a></li>
+                  <li><a href="/login">Login</a></li>
+                <% end %>
+              </ul>
+            </nav>
+            </div>
+          </div>
+            <div class="inner cover">
+                <%= yield %>
+            </div>
+            <div class="mastfoot">
+              <div class="inner">
+                <p>Site design by Tyler Sharp</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/application.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  </body>
 </html>

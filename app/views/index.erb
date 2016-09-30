@@ -1,6 +1,10 @@
 <% if !logged_in?%>
-  <h1>Get the conversation flowing</h1>
-  <h3>Need help finding something interesting to talk about? Conversation Starter makes it simple to come up with unique and thought-provoking questions to get your interactions going. </h3>
+  <h1 class="cover-heading">Get the conversation flowing</h1>
+  <p class="lead">Need help finding something interesting to talk about?</p>
+  <p class="lead">Conversation Starter makes it simple to come up with unique and thought-provoking questions to get your interactions going. </p>
+  <p class="lead">
+    <a href="/users/new" class="btn btn-lg btn-default">Get Started</a>
+  </p>
 <% elsif logged_in?%>
   <h1>Welcome to Conversation Starter!</h1>
   <h3>To get started, generate a question and let the discussion begin.</h3>
