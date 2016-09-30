@@ -1,0 +1,12 @@
+<%= erb(:_errors) %>
+
+<form action="/users/<%= @user.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <label>Username</label>
+  <input class="full-length" type="text" name="user[username]" value="<%= @user.username %>">
+  <label>Email Address</label>
+  <input class="full-length" type="text" name="user[email]" value="<%= @user.email %>">
+  <label>Password</label>
+  <input class="full-length" type="text" name="user[password]" value="<%= @user.password %>">
+  <input type="submit" value="Update Info">
+</form>
