@@ -1,52 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>ConversationStarter</title>
 
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.css">
-    <link rel="stylesheet" href="css/cover.css">
-    <link rel="stylesheet" href="css/application.css">
-
-    <title>Conversation Starter</title>
+    <!-- CSS -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/css/materialize.css" type="text/css" rel="stylesheet"   media="screen,projection"/>
+    <link href="/css/application.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   </head>
   <body>
-    <div class="site-wrapper">
-      <div class="site-wrapper-inner">
-        <div class="cover-container">
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">ConversationStarter</h3>
-              <nav>
-              <ul class="nav masthead-nav">
-                <% if logged_in? %>
-                  <li class="active"><a href="/">Home</a></li>
-                  <li><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
-                  <li><a href="/logout">Logout</a></li>
-                <% else %>
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/users/new">Register</a></li>
-                  <li><a href="/login">Login</a></li>
-                <% end %>
-              </ul>
-            </nav>
-            </div>
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="/" class="brand-logo">ConversationStarter</a>
+        <ul class="right hide-on-med-and-down">
+          <% if logged_in? %>
+            <li><a href="/">Home</a></li>
+            <li><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
+            <li><a href="/logout">Logout</a></li>
+          <% else %>
+            <li><a href="/">Home</a></li>
+            <li><a href="/users/new">Register</a></li>
+            <li><a href="/login">Login</a></li>
+          <% end %>
+        </ul>
+        <ul id="nav-mobile" class="side-nav">
+          <% if logged_in? %>
+            <li><a href="/">Home</a></li>
+            <li><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
+            <li><a href="/logout">Logout</a></li>
+          <% else %>
+            <li><a href="/">Home</a></li>
+            <li><a href="/users/new">Register</a></li>
+            <li><a href="/login">Login</a></li>
+          <% end %>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+    <%= yield %>
+    <footer class="page-footer teal">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Project Background</h5>
+            <p class="grey-text text-lighten-4">This is a simple web application that I built while attending Dev Bootcamp's immersive full-stack web development program in NYC. My goal was to make it really easy to start interesting conversations by using Google Trends data.</p>
+
           </div>
-            <div class="inner cover">
-                <%= yield %>
-            </div>
-            <div class="mastfoot">
-              <div class="inner">
-                <p>Site design by Tyler Sharp</p>
-              </div>
-            </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Settings</h5>
+            <ul>
+              <li><a class="white-text" href="#!">Link 1</a></li>
+              <li><a class="white-text" href="#!">Link 2</a></li>
+              <li><a class="white-text" href="#!">Link 3</a></li>
+              <li><a class="white-text" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Connect</h5>
+            <ul>
+              <li><a class="white-text" href="#!">Link 1</a></li>
+              <li><a class="white-text" href="#!">Link 2</a></li>
+              <li><a class="white-text" href="#!">Link 3</a></li>
+              <li><a class="white-text" href="#!">Link 4</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/application.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <div class="footer-copyright">
+        <div class="container">
+        Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.js"></script>
+    <script src="/js/application.js"></script>
   </body>
 </html>
