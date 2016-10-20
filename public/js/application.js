@@ -1,3 +1,12 @@
+(function($){
+  $(function(){
+
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
+
+  }); // end of document ready
+})(jQuery); // end of jQuery name space
+
 $(document).ready(function() {
   // This is called after the document has loaded in its entirety
   // This guarantees that any elements we bind to will exist on the page
