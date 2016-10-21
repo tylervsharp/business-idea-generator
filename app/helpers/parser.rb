@@ -12,18 +12,3 @@ module GoogleTrendsParser
     end
   end
 end
-
-# module GoogleTrendsParser
-#   def self.parse
-#     url = 'https://www.google.com/trends/hottrends/atom/feed'
-#     open(url) do |rss|
-#       feed = RSS::Parser.parse(rss)
-#       feed.items.each do |item|
-#         Trend.create(
-#           title: item.title,
-#           date: item.pubDate
-#         )
-#       end
-#     end
-#   end
-# end
