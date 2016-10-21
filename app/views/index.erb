@@ -1,45 +1,28 @@
-<% if !logged_in?%>
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center teal-text text-lighten-2">Start percolating</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">Need help finding something interesting to talk about?</h5>
-        </div>
-        <div class="row center">
-          <a href="/users/new" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
-        </div>
-        <br><br>
-
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+      <h1 class="header center white-text text-lighten-2">Start percolating</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Need help finding something interesting to talk about?</h5>
       </div>
-    </div>
-    <div class="parallax"><img src="images/background1.jpg" alt="Unsplashed background img 1"></div>
-  </div>
+      <div class="row center">
+        <a href="/users/new" id="download-button" class="btn-large waves-effect waves-light indigo darken-4">Get Started</a>
+      </div>
+      <br><br>
 
-  <div class="container">
-    <div class="section">
-      <div class="row">
-        <div class="col s12 center">
-          <h4>Get the conversation flowing</h4>
-          <p class="home-text">Conversation Starter makes it simple to come up with unique and thought-provoking questions to get your interactions going.</h5>
-        </div>
+    </div>
+  </div>
+  <div class="parallax"><img src="images/background1.jpg" alt="Unsplashed background img 1"></div>
+</div>
+
+<div class="container">
+  <div class="section">
+    <div class="row">
+      <div class="col s12 center">
+        <h4>Get the conversation flowing</h4>
+        <p class="body-text">Conversation Starter makes it simple to come up with unique and thought-provoking questions to get your interactions going.</h5>
       </div>
     </div>
   </div>
-
-<% else %>
-  <div class="container">
-    <div class="section">
-      <div class="row">
-        <div class="col 16 s12">
-          <h2>Welcome to ConversationStarter!</h2>
-          <h5>To get started, generate a question and let the discussion begin.</h5>
-        </div>
-        <div class="row center">
-          <a href="/prompt" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Generate Question</a>
-        </div>
-      </div>
-    </div>
-  </did>
-<% end %>
+</div>

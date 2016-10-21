@@ -1,5 +1,9 @@
 get '/' do
-  erb :'index'
+  if !logged_in?
+   erb :'index'
+  else
+    erb :'sessions/show'
+  end
 end
 
 get '/login' do
