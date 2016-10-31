@@ -37,6 +37,31 @@ questions_array = [
   "If you had to sum up *** in three words, what would those words be?",
   "Is *** beneficial?",
   "What about *** do you find embarrasing?",
-  "What about *** do you find disgusting?"]
+  "What about *** do you find disgusting?",
+  "What are the advantages and disadvantages of ***?",
+  "Do you think *** could be beneficial to you?",
+  "If *** was an animal, which one would it be?",
+  "If *** was a crime, what would the punishment be?",
+  "What is the most annoying part of ***?",
+  "If *** was a branch in the United States military, which branch would it be?",
+  "If *** was a sport, what would the rules be?",
+  "If *** was a dream, what elements would the dream have?",
+  "*** is a store - what products would be sold there?",
+  "What do you consider to be the biggest injustice about ***?",
+  "What is the most creative thing about ***?",
+  "What is the strangest thing about ***?",
+  "If *** was a question, what would be the answer?",
+  "If you had to compare *** to an emotion, which emotion would you choose?",
+  "If *** was a superhero, what powers would it hold"?
+  "If *** was a movie, who would the director be?",
+  "If *** was a holiday, what traditions would be observed?",
+  "Is *** making people more or less impatient?",
+  "If *** was a bad habit, what would be the remedy?",
+  "If *** was a diet, what food items would be allowed?",
+  "If *** was a superstition, what practices would have to be followed to avoid bad luck?",
+  "If *** was reincarnated in animal form, which animal would you see?",
+  "If *** was a song, what would be the first verse?",
+  "If you could alter one thing about ***, what would it be?"
+]
 
   questions_array.each {|question| questions << Question.create!(body: question)}
