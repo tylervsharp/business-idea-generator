@@ -6,7 +6,7 @@ module ArticleFinder
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
     uri.query = URI.encode_www_form({
-      "api-key" => "e36b86a968174a2080a518986737d78b",
+      "api-key" => "",
       "q" => "#{keyword}",
       "begin_date" => (Date.today - 10).strftime("%Y%m%d"),
       "fl" => "web_url,headline,pub_date,news_desk"
